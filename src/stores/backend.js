@@ -656,7 +656,7 @@ export const useBackendStore = defineStore({
         } catch (e) {
           if (this.backend_id === "automatic1111") {
             error_message =
-              "You need to start the automatic1111 backend on your computer with '--cors-allow-origins=http://localhost:5173,https://diffusionui.com'.";
+              "Pixio API is online but the servers may be busy please email rcohen@mytsi.org if you are trying to access it but cannot. Remember this tool is in beta.";
           } else {
             error_message = "Error trying to download the gradio config";
           }

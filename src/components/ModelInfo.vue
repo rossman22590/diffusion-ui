@@ -14,29 +14,28 @@ const ui = useUIStore();
 <template lang="pug">
 div
   .sidebar-section
-    h3.sidebar-section-title Model
-    p.model-description(v-if="backend.description")
-      span(v-html="backend.description")
+    h3.sidebar-section-title ProCraft by Pixio (beta)
+    p.model-description Advanced Settings Panel
     p(v-if="backend.doc_url")
       a(:href="backend.doc_url" target="_blank")
         font-awesome-icon(icon="fa-solid fa-book")
-        |  Documentation
+        |  Model Request
     p(v-if="backend.license")
       strong License: 
       a.cursor-pointer(@click="backend.showLicense") {{ backend.license }}
     Divider(type="dashed")
     Card(v-if="backend.model_info_inputs" style="margin-bottom: 2em")
       template(#title)
-        | Global parameters
+        | Pixio API is Online 🟢
       template(#content)
         .flex.flex-column.align-items-center
           .api-url(v-if="backend.api_url" title="the URL used to generate the images")
             .field.grid
               label.col-fixed(for="api-url" style="margin:auto")
                 font-awesome-icon(icon="fa-solid fa-link")
-                span  API url
-              .col
-                #api-url.api-url-value.cursor-pointer(@click="ui.showEditURL") {{ backend.base_url }}
+                span  If you need help email support@mytsi.org
+      //-         .col
+      //-           #api-url.api-url-value.cursor-pointer(@click="ui.showEditURL") {{ backend.base_url }}
           template(v-if="backend.has_access_code")
             .field.grid(:title="backend.access_code_input.description")
               label.col-fixed(style="min-width: 150px; margin:auto")

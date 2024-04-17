@@ -14,8 +14,8 @@ Message(severity="error" :closable="false")
   div(v-else)
     span {{ output.error_message }}
     p(v-if="backend.doc_url")
-      | Please check the 
-      a(:href="backend.doc_url" target="_blank")
-        font-awesome-icon(icon="fa-solid fa-book")
-        |  Documentation
+      | Please contact us.
+      //- a(:href="backend.doc_url" target="_blank")
+      //-   font-awesome-icon(icon="fa-solid fa-book")
+      //-   |  Documentation
 </template>

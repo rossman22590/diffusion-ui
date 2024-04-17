@@ -8,11 +8,22 @@ const ui = useUIStore();
 <template lang="pug">
 Button.panel-toggler.left-panel-toggler(@click="ui.showLeftPanel")
   font-awesome-icon(icon="fa-solid fa-gears")
+.ui-by-pixio
+  |ProCraft Entperise Image Generation Tools (beta)
 Button.panel-toggler.right-panel-toggler(@click="ui.showRightPanel")
   font-awesome-icon(icon="fa-solid fa-images")
 </template>
 
 <style scoped>
+.ui-by-pixio {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
+  color: #64748b;
+  z-index: 2; 
+}
 .panel-toggler {
   position: fixed;
   z-index: 1;
